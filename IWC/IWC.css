@@ -1,6 +1,7 @@
 body {
     
  background-color: aliceblue;
+    margin: 45px;
 }
 
 
@@ -8,6 +9,7 @@ body {
 #container {
     margin: 25 px;
     background-color: antiquewhite;
+    
    
     
     
@@ -36,13 +38,28 @@ padding: 15px 25px;
     padding: 5px; 
  background-color:dimgrey;   
 }
+
 #headColor {
 color: aliceblue;
 }
 .menuBar {
     background-color: skyblue;
     width:150px;
+    margin-bottom: -21px;
     padding: 15px;
     text-align: center;
 
+}
+
+.layerBox {
+  
+
+}
+
+
+.footer {
+    text-align: center;
+    
+    background-color: cadetblue;
+    
 }
