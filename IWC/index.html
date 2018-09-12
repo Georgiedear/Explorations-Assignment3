@@ -10,10 +10,12 @@
 <body>
     
     <script>
+        var input;
     var canvas;
        // var link = document.getElementById("toolkit.html");
         
     function setup() {
+        input = createInput();
     canvas = createCanvas(800, 400); //how big my canvas is.
         canvas.position(300, height/ 2);
         
@@ -23,6 +25,8 @@
         
 
     function draw () {
+              
+
         background(0);
         fill(255);
         rect ( 250, height / 2, 300, 30, 20); 
