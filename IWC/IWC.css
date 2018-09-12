@@ -4,18 +4,27 @@ body {
 }
 
 
+
 #container {
+    margin: 25 px;
     background-color: antiquewhite;
-    padding: 25px;
+ 
     
     
 }
 
+.header {
+    border color: aliceblue;
+    padding: 5px; 
+ background-color:dimgrey;   
+}
+#headColor {
+color: aliceblue;
+}
 .menuBar {
-    position: absolute;
     background-color: skyblue;
     width:150px;
     padding: 15px;
-    margin 15px;
+    text-align: center;
 
 }

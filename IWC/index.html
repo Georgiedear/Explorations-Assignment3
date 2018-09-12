@@ -11,31 +11,38 @@
     
     <script>
     var canvas;
-        var button;
+        var link = document.getElementById("toolkit.html");
+        
     function setup() {
-    
- button = createButton();
+    link = createElement('a',"toolkit.html");
     canvas = createCanvas(800, 400); //how big my canvas is.
         canvas.position(300, height/ 2);
+
     
     }
         
 
     function draw () {
-        
-        background(0);
+        //background(0);
         fill(255);
-      button.rect ( 250, height / 2, 300, 30, 20); //3rd element curves the edges of the rectangle.
+        rect ( 250, height / 2, 300, 30, 20); //
+        //3rd element curves the edges of the rectangle.
         
         }
-        
-    
-        
-       
+      
+       function mousePressed() {
+           fill(210);
+           rect( 100, height / 2, 300, 30, 20);
+           
+       } 
+        if(mouseIsPressed) {
+            link.html();
+            
+        }
      
     </script>
- 
-    
+    <!--<p>  <a href="toolkit.html"> Open </a></p> -->
+
     
     
  </body>
