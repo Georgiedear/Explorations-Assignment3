@@ -3,56 +3,38 @@
         
     <link rel="stylesheet" type="text/css" href="IWC.css">   
     <script src = "p5/p5.min.js"></script>
+        <script src="p5/addons/p5.dom.js"></script>       
+    
         
     </head>
 <body>
-
-    <div id="openBox">
-<script>
- 
     
+    <script>
+    var canvas;
+        var button;
     function setup() {
     
-       
-        canvas = createCanvas(800, 600); //Got these co-ordinates by inspecting the preview page's size
-           }
+ button = createButton();
+    canvas = createCanvas(800, 400); //how big my canvas is.
+        canvas.position(300, height/ 2);
     
-    
+    }
+        
+
     function draw () {
         
-        
+        background(0);
         fill(255);
-     rect(499, height/2, 300, 30,20); //3rd element curves the edges of the rectangle.
+      button.rect ( 250, height / 2, 300, 30, 20); //3rd element curves the edges of the rectangle.
         
-        fill(0);
-         rect(580, 350, 150, 30, 60);
+        }
         
-          textSize(18);
-        fill(0);
-        text('Welcome to My Interactive Web Comic!', 485, 250)
-        text('Enter your PSD or AI file below')
-        text('File:', 450,320);
-        fill(255);
-           text('Open', 635,372);
+    
         
-    }
-    
-    
-    
-    
-    
-    
-    
-    
+       
+     
     </script>
-    
-    
-    
-    </div>
-    
-    
-    
-    
+ 
     
     
     

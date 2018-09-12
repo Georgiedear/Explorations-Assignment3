@@ -1,11 +1,21 @@
 body {
     
-    background-color: aliceblue;
+ background-color: aliceblue;
 }
 
-#openBox {
-    margin: 20px;
-    padding: 20px;
+
+#container {
+    background-color: antiquewhite;
+    padding: 25px;
     
     
+}
+
+.menuBar {
+    position: absolute;
+    background-color: skyblue;
+    width:150px;
+    padding: 15px;
+    margin 15px;
+
 }
