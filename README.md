@@ -35,3 +35,10 @@ https://www.youtube.com/watch?v=uNQSVU0IKec
 
 -I don’t actually plan to load PSD files on here but as a next test I will see if I can get this text box to find and load a png or jpg onto the next page (the actual toolkit interface.
 Speaking of which! I need to add the rest of the divs and make it look better.(The div’s bag colours are only there to see how the divs are nested around each other.
+
+___________________________________________________
+
+3:53 AM
+
+Managed to get the text box ON TOP of the canvas. Finally starting to wrap my head around how P5.js’s DOM tagging works…
+Time to link some strings and make an interactive webcomic! and make things slightly prettier.

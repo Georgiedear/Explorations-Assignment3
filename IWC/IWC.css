@@ -1,19 +1,27 @@
 body {
     
  background-color: aliceblue;
-    margin: 45px;
+    margin: 45px auto 45px auto;
+    position:absolute;
+	width:100%;
+    
 }
 
 
 
-#container {
+.container {
     margin: 25 px;
     background-color: antiquewhite;
-    
+    position:relative;
    
-    
+ 
     
 }
+
+#pullFront{ 
+    z-index: 1;
+}
+
  #openPage{
      
      background-color: white;
@@ -26,7 +34,7 @@ body {
     margin-left: 640px;
     margin-top:450px; 
 padding: 15px 25px;
-    z-index: 1;    
+  z-index: 1;  
 
     color: white;
     display: inline-block;
@@ -52,7 +60,8 @@ color: aliceblue;
 }
 
 .layerBox {
-  
+      background-color: skyblue;
+
 
 }
 

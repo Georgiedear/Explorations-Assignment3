@@ -17,7 +17,8 @@
     function setup() {
         input = createInput();
     canvas = createCanvas(800, 400); //how big my canvas is.
-        canvas.position(300, height/ 2);
+        canvas.position(335, 130);
+        
         
 
     
@@ -25,11 +26,11 @@
         
 
     function draw () {
-              
-
-        background(0);
-        fill(255);
-        rect ( 250, height / 2, 300, 30, 20); 
+        input.id('pullFront'); //I'm getting the hang of using the html DOM's :D
+        input.position(690, 335);
+        background(0); 
+       // fill(255);
+    //    rect ( 250, height / 2, 300, 30, 20); 
         //
         //3rd element curves the edges of the rectangle.
         textSize(24);
@@ -40,8 +41,13 @@
         
         textSize(18);
         fill(255);
-        text("File :",205, 220);
+        text("File :",300, 220);
+        
+        
+        // fill(210);
+    //    rect(0,0,30,30);
         }
+        
       
         /*
        function mousePressed() {
@@ -49,12 +55,22 @@
            rect( 100, height / 2, 300, 30, 20);
            
        } 
+       
+       
         if(mouseIsPressed) {
            a href.html();
             
         }
-     
+        
+               function mousePressed(){       
+            
+     if (mouseX < 100 & mouseY < 100){
+         window.location.href = "http://www.google.ca";
+     }
+}
      */
+       
+ 
     </script>
 
     <a href="toolkit.html"><h2 id="openLink">Open</h2></a>      
