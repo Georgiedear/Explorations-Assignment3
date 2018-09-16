@@ -4,23 +4,28 @@
         
  <link rel="stylesheet" type="text/css" href="IWC.css">   
     <script src = "p5/p5.min.js"></script> 
-        <script src="p5/p5.js"></script>
+      <!--  <script src="p5/p5.js"></script> -->
         <script src="p5/addons/p5.dom.js"></script>
   
     </head>
 <body>
    
+      
    
     
      <div class="container">
+        
+         
      <div class="header">
     
     <h1 id="headColor">Header (Interactive Web Comic) </h1>
-         <div>
          
+         <div> 
          <p id="headColor">I'll add file and preview tabs in this div later</p>
          </div>
     </div>
+         
+        
 <div class="menuBar">
     
     
@@ -40,34 +45,86 @@
     <p> Shrink </p>
     
     <p>These will all be icons later...</p> 
+    
 
     
     </div>
     
-    
-    <div class ="footer">
+     <div id="workSpace">
+         
+       <script>  
+             var canvas;
+             var filePopUp;
+             var fileOpenBG;
+           var menu;
+           var footer;
+             
+             function setup()
+             {
+                canvas = createCanvas(1239,545);
+                filePopUp = createGraphics(400, 300); 
+                fileOpenBG = createGraphics(1000,500);
+            //   footer = createDiv();
+            //     menu = createDiv();
+                 
+                 
+              //   fileOpenBG.backgroundImage('IWC_BG.png');
+                 canvas.id('pullBack'); 
+                 canvas.parent('workSpace');
+                 canvas.position(202, -545);
+                 
+              //   footer.class('footer');
+             //    menu.class('menuBar');
+                 
+                 
+                 tint(0,127);
+                 fileOpenBG.background(0);
+                 
+                 filePopUp.background(255);  
+                
+                
+
+             }
+             
+             function draw() {
+                    background(50);
+                  //For the FileOpening
+                 openFile();
+               // for the canvas 
+             }
+             
+                function openFile() { 
+          image(fileOpenBG, 220, 50);
+                 image(filePopUp, 420, 105);
+                   
+
+             } 
+             
+             
+             
+             </script>
+         
+           
+       
+         
+         </div>
+         
+
+  
+   <div class ="footer">
     
     <h4 id="headColor"> IWC © 2018</h4>
     
-    </div>
-    
+    </div>   
 
     
     <div class="layerBox">
             
-    
+   
     </div>
+         
+          
     </div>
-    
-    <script>
-    
-    //the very base of my interactive webcomic layout and all it's content. Gonna make it work soon...
-    
-    
-    
-    
-    </script>
-    
     
     
     

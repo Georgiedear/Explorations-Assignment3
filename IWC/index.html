@@ -10,19 +10,15 @@
 <body>
     
     <script>
-        var input;
+    var input;
     var canvas;
-       // var link = document.getElementById("toolkit.html");
+        
         
     function setup() {
-        input = createInput();
+    input = createInput();
     canvas = createCanvas(800, 400); //how big my canvas is.
-        canvas.position(335, 130);
-        
-        
-
-    
-    }
+    canvas.position(335, 130);
+            }
         
 
     function draw () {
@@ -37,16 +33,28 @@
         fill(255);
         text("Welcome to My Interactive Webcomic", 200, 150);
         textSize(18);
-            text("Enter your PSD or AI file and click Open", 235, 180);
+            text("Enter your PSD or AI file and hit Enter", 235, 180);
         
         textSize(18);
         fill(255);
         text("File :",300, 220);
         
-        
-        // fill(210);
-    //    rect(0,0,30,30);
         }
+         
+        function keyPressed(){
+            
+            if(keyCode === ENTER) {
+                window.location.href = "toolkit.html";
+                
+        
+                
+            }            
+            
+        }
+        
+        
+      
+        
         
       
         /*
@@ -69,11 +77,14 @@
      }
 }
      */
+
        
  
     </script>
 
-    <a href="toolkit.html"><h2 id="openLink">Open</h2></a>      
+  <!-- <a href="toolkit.html"><h2 id="openLink"> </h2></a> -->       
+    
+    
     
  </body>
 </html>
