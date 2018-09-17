@@ -12,12 +12,18 @@
     <script>
     var input;
     var canvas;
-        
+    var footer;    
         
     function setup() {
     input = createInput();
+        footer = createDiv('');
     canvas = createCanvas(800, 400); //how big my canvas is.
     canvas.position(335, 130);
+        
+        
+          footer = createDiv('IWC © 2018');
+                 footer.class('footer');
+                 footer.id('headColor');
             }
         
 
@@ -44,6 +50,7 @@
         function keyPressed(){
             
             if(keyCode === ENTER) {
+                
                 window.location.href = "toolkit.html";
                 
         

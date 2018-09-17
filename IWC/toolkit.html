@@ -18,17 +18,17 @@
          
      <div class="header">
     
-    <h1 id="headColor">Header (Interactive Web Comic) </h1>
+    <h1 id="headColor"> My Interactive Webcomic </h1>
          
          <div> 
-         <p id="headColor">I'll add file and preview tabs in this div later</p>
+         <p id="subColor"> myFirstIWC.png </p>
          </div>
     </div>
          
-        
-<div class="menuBar">
-    
-    
+         
+
+    <!--
+  <div class="menuBar">  
     <h1 id="headColor">MenuBar </h1>
    <p id="headColour">Mouse Selection Tool</p>
     
@@ -45,43 +45,154 @@
     <p> Shrink </p>
     
     <p>These will all be icons later...</p> 
+     </div> 
     
-
-    
-    </div>
+  -->
     
      <div id="workSpace">
          
        <script>  
-             var canvas;
-             var filePopUp;
-             var fileOpenBG;
+           var canvas;
+           var panel;
+           var panel2;
+           var panel3;
+           var panel4;
+           
+             var workSpaceBG;
            var menu;
+           var layerBox;
            var footer;
+           
+           //IMAGES
+           //SELECTION
+           var mouse; 
+           
+           //TRIGGER BUTTONS
+           var scroll;
+           var mouseHover;
+           
+           //ACTION BUTTONS
+           var fade;
+           var move;
+           var grow;
+           var shrink;
+           var shake;
+           //text for Menu
+           var mText;
+           var mText1;
+           var mText2;
+           var layerText;
+           
+           
+           //BUTTON HIGHTLIGHT
+           var mouseHover;
+           var scrollHover;
+           var fadeHover;
+           var moveHover;
+           var growHover;
+           var shrinkHover;
+           var shakeHover;
+
+
              
              function setup()
              {
-                canvas = createCanvas(1239,545);
-                filePopUp = createGraphics(400, 300); 
-                fileOpenBG = createGraphics(1000,500);
-            //   footer = createDiv();
-            //     menu = createDiv();
+                canvas = createCanvas(1250,1050);
+                panel = createGraphics(820, 160);
+                panel2 = createGraphics(300, 300); 
+                panel3 = createGraphics(500, 300); 
+                panel4 = createGraphics(820, 160); 
+
+
+                workSpaceBG = createGraphics(950,800);
+                 menu = createDiv();
+                 layerBox = createDiv();
                  
                  
-              //   fileOpenBG.backgroundImage('IWC_BG.png');
+                 mText = createElement('h2','Selection');
+                 mText1 = createElement('h2','Triggers');
+                 mText2 = createElement('h2','Actions');
+                 layerText = createElement('h2', 'LayerBox');
+                 
+                 mouse = createImg('IWC_SelectionMouse.png');
+                 scroll = createImg('IWC_Scroll.png');
+                 mouseHover = createImg('IWC_MouseHover.png');
+                 
+                 fade = createImg('IWC_fade.png');
+                 move = createImg('IWC_move.png');
+                 grow = createImg('IWC_grow.png');
+                 shrink = createImg('IWC_shrink.png');
+                 shake = createImg('IWC_shake.png');
+                 
+               //MY FAV LINE OF CODE IS THE FOOTER CAUSE
+                 //AFTER HOURS OF WONDERING WHERE IT WAS
+                 //IT WAS HERE THE WHOLE TIME AND I JUST DIDN'T
+                // SEE IT TILL I ADDED TEXT IN THE BRACKETS LMAO
+                 
+               footer = createDiv('IWC © 2018');
+                 footer.class('footer');
+                 footer.id('headColor');
+          
+                 
+                 
                  canvas.id('pullBack'); 
                  canvas.parent('workSpace');
-                 canvas.position(202, -545);
+                 canvas.position(-1090, -37);
+                 footer.child('workSpace');
                  
-              //   footer.class('footer');
-             //    menu.class('menuBar');
                  
+                 menu.class('menuBar'); 
+                 menu.id('pullFront');
+                 
+                layerBox.child('workSpace');
+                layerBox.class('layerBox');
+                 layerBox.id('headColor');
+                 layerBox.child(layerText);
+
+
+                 mText.class('menuText');
+                 mText1.class('menuText');
+                 mText2.class('menuText');
+                 layerText.class('layerText');
+
+
+                 mouse.class('newImgGap');
+                 mouseHover.class('triggerGap');
+                 scroll.class('triggerGap');
+                 fade.class('actionGap');
+                 move.class('smallGap');
+                 grow.class('smallGap');
+                 shrink.class('smallGap');
+                 shake.class('smallGap');
+                 
+                 
+                 
+//IMAGES BEING THE CHILD OF MENU AND ITS PROPERTIES
+                 menu.child(mText);
+                 menu.child(mouse);
+            
+                 menu.child(mText1);
+                 menu.child(scroll);
+                 menu.child(mouseHover);
+                 
+                 menu.child(mText2);
+                 menu.child(fade);
+                 menu.child(move);
+                 menu.child(grow);
+                 menu.child(shrink);
+                 menu.child(shake);
+
+            //     footer.child('workSpace');
+              //   footer.class('menuBar');
                  
                  tint(0,127);
-                 fileOpenBG.background(0);
+                 workSpaceBG.background(0);
                  
-                 filePopUp.background(255);  
-                
+                 tint(255);
+                 panel.background(255);  
+                panel2.background(255);
+                 panel3.background(255);
+                 panel4.background(255);
                 
 
              }
@@ -94,9 +205,20 @@
              }
              
                 function openFile() { 
-          image(fileOpenBG, 220, 50);
-                 image(filePopUp, 420, 105);
-                   
+                    
+                    //I realized that since the canvas is attached
+                    //to the id 'pullback' everything that is 
+                    //apart of that canvas is pulled back behind
+                    //the rest of the content such as the menu bar
+                    //and header.
+                    
+          image(workSpaceBG, 55, 100);
+                    
+                 image(panel, 125, 155);
+                image(panel2, 125, 340);
+                 image(panel3, 445, 340);
+                image(panel4, 125, 660);
+
 
              } 
              
@@ -110,18 +232,15 @@
          </div>
          
 
-  
+  <!-- The old footer lies to rest here...R.IP
    <div class ="footer">
     
     <h4 id="headColor"> IWC © 2018</h4>
     
     </div>   
 
-    
-    <div class="layerBox">
-            
-   
-    </div>
+    -->
+ 
          
           
     </div>

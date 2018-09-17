@@ -21,12 +21,15 @@ body {
 
 #workSpace {
     position: relative;
-}
 
+
+}
 #openFile {
     
-    background-image: "IWC_BG.png";
+    position: relative;
 }
+
+
 
 #pullFront{ 
    z-index: 1;
@@ -40,35 +43,69 @@ body {
 
 
 .header {
-    border color: aliceblue;
-    padding: 5px; 
+    text-align: center;
+    padding-top: 2px; 
  background-color:dimgrey;   
 }
 
 #headColor {
-color: aliceblue;
+color: white;
+}
+#subColor {
+    color: white;
+     text-align: center;
+    border color: aliceblue;
+    padding-bottom: 10px; 
 }
 .menuBar {
-    background-color: skyblue;
+    background-color:#0f537a; 
     width:150px;
     height: auto;
-    padding: 26px;
+    padding: 20px;
+    margin-top:-17px;
     text-align: center;
 
 
 }
+.newImgGap {
+    padding-top: -20px;
+    padding-bottom: 25px;
+}
+
+.triggerGap {
+    
+    padding-bottom: 10px; 
+}
+
+.actionGap {
+        padding-top: 0px;
+ 
+}
+.smallGap{
+    padding: 5px;
+}
+.menuText {
+    color: white;
+}
+.layerText {
+    color: white;
+}
 
 .layerBox {
       background-color: skyblue;
-
-
+    background-color:#0f537a; 
+    width:150px;
+    height: 1003px;
+    padding: 10px;
+    margin-left: 1270px;
+    margin-top:-1023px;
+    position: absolute;
+    text-align: center;
 }
 
 
 .footer {
-    margin-top: 0px;
-    margin: -21px;
-    margin-bottom: 21px;
+    padding: 10px;
     text-align: center;
     background-color: cadetblue;
     
