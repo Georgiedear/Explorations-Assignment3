@@ -91,6 +91,22 @@ color: white;
     color: white;
 }
 
+ #buttonHover  {
+	/*padding-left: 315px;*/
+	opacity: 0.0;
+	position: relative;
+	top: -475px;
+	-webkit-transition: opacity 1s;
+	-moz-transition: opacity 1s;
+	-ms-transition: opacity 1s;
+	-o-transition:: opacity 1s;
+	/*background-image: url(BGggy_Name-plate.png);*/
+	}
+	#buttonHover:hover {
+		opacity: 1.0;
+	}
+	
+
 .layerBox {
       background-color: skyblue;
     background-color:#0f537a; 
@@ -98,7 +114,7 @@ color: white;
     height: 1003px;
     padding: 10px;
     margin-left: 1270px;
-    margin-top:-1023px;
+    margin-top:-1110px;
     position: absolute;
     text-align: center;
 }

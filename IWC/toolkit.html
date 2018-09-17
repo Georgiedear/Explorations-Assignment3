@@ -3,9 +3,9 @@
     <head>
         
  <link rel="stylesheet" type="text/css" href="IWC.css">   
-    <script src = "p5/p5.min.js"></script> 
+  <script src = "p5/p5.min.js"></script> 
       <!--  <script src="p5/p5.js"></script> -->
-        <script src="p5/addons/p5.dom.js"></script>
+        <script src="p5/addons/p5.dom.js"></script> 
   
     </head>
 <body>
@@ -58,12 +58,20 @@
            var panel3;
            var panel4;
            
-             var workSpaceBG;
+            var workSpaceBG;
            var menu;
            var layerBox;
            var footer;
            
            //IMAGES
+           
+           //BUTTONS
+           var file;
+           var preview;
+           
+           //Navigation for Menu
+           var hoverOver;
+           
            //SELECTION
            var mouse; 
            
@@ -107,7 +115,9 @@
                 workSpaceBG = createGraphics(950,800);
                  menu = createDiv();
                  layerBox = createDiv();
-                 
+                
+                // file = createImg('IWC_file.png');
+              //  preview = createImg('IWC_preview.png');
                  
                  mText = createElement('h2','Selection');
                  mText1 = createElement('h2','Triggers');
@@ -124,6 +134,11 @@
                  shrink = createImg('IWC_shrink.png');
                  shake = createImg('IWC_shake.png');
                  
+                 
+                 fadeHover = createImg('IWC_fadeHover.png');
+              
+                 
+                 
                //MY FAV LINE OF CODE IS THE FOOTER CAUSE
                  //AFTER HOURS OF WONDERING WHERE IT WAS
                  //IT WAS HERE THE WHOLE TIME AND I JUST DIDN'T
@@ -134,12 +149,10 @@
                  footer.id('headColor');
           
                  
-                 
                  canvas.id('pullBack'); 
                  canvas.parent('workSpace');
                  canvas.position(-1090, -37);
                  footer.child('workSpace');
-                 
                  
                  menu.class('menuBar'); 
                  menu.id('pullFront');
@@ -148,6 +161,8 @@
                 layerBox.class('layerBox');
                  layerBox.id('headColor');
                  layerBox.child(layerText);
+                 
+                 
 
 
                  mText.class('menuText');
@@ -165,6 +180,7 @@
                  shrink.class('smallGap');
                  shake.class('smallGap');
                  
+                 fadeHover.id('buttonHover');
                  
                  
 //IMAGES BEING THE CHILD OF MENU AND ITS PROPERTIES
@@ -181,10 +197,9 @@
                  menu.child(grow);
                  menu.child(shrink);
                  menu.child(shake);
+                 menu.child(fadeHover);
 
-            //     footer.child('workSpace');
-              //   footer.class('menuBar');
-                 
+      
                  tint(0,127);
                  workSpaceBG.background(0);
                  
@@ -212,7 +227,10 @@
                     //the rest of the content such as the menu bar
                     //and header.
                     
-          image(workSpaceBG, 55, 100);
+                
+                    image(workSpaceBG, 55, 100);
+                  //  image(preview,0,0);
+                //    image(file,200,50);
                     
                  image(panel, 125, 155);
                 image(panel2, 125, 340);
