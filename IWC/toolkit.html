@@ -58,8 +58,9 @@
            var panel3;
            var panel4;
            
-            var workSpaceBG;
+           var workSpaceBG;
            var menu;
+           var menuH;
            var layerBox;
            var footer;
            
@@ -68,16 +69,17 @@
            //BUTTONS
            var file;
            var preview;
+           var upload;
            
            //Navigation for Menu
            var hoverOver;
            
            //SELECTION
-           var mouse; 
+           var sMouse; 
            
            //TRIGGER BUTTONS
            var scroll;
-           var mouseHover;
+           var mouse;
            
            //ACTION BUTTONS
            var fade;
@@ -93,6 +95,7 @@
            
            
            //BUTTON HIGHTLIGHT
+           var selectHover;
            var mouseHover;
            var scrollHover;
            var fadeHover;
@@ -105,29 +108,30 @@
              
              function setup()
              {
-                canvas = createCanvas(1250,1050);
+                canvas = createCanvas(1250,1070);
                 panel = createGraphics(820, 160);
                 panel2 = createGraphics(300, 300); 
                 panel3 = createGraphics(500, 300); 
                 panel4 = createGraphics(820, 160); 
 
 
-                workSpaceBG = createGraphics(950,800);
+                workSpaceBG = createGraphics(950,780);
                  menu = createDiv();
                  layerBox = createDiv();
+                 menuH = createDiv();
                 
-                // file = createImg('IWC_file.png');
-              //  preview = createImg('IWC_preview.png');
+                 file = createImg('IWC_file.png');
+                preview = createImg('IWC_preview.png');
+                 upload = createImg('IWC_upload.png');
                  
                  mText = createElement('h2','Selection');
                  mText1 = createElement('h2','Triggers');
                  mText2 = createElement('h2','Actions');
                  layerText = createElement('h2', 'LayerBox');
                  
-                 mouse = createImg('IWC_SelectionMouse.png');
+                 sMouse = createImg('IWC_SelectionMouse.png');
                  scroll = createImg('IWC_Scroll.png');
-                 mouseHover = createImg('IWC_MouseHover.png');
-                 
+                 mouse = createImg('IWC_Mouse.png');       
                  fade = createImg('IWC_fade.png');
                  move = createImg('IWC_move.png');
                  grow = createImg('IWC_grow.png');
@@ -135,7 +139,14 @@
                  shake = createImg('IWC_shake.png');
                  
                  
+                 selectHover = createImg('IWC_selectHover.png');
+                 mouseHover = createImg('IWC_mouseHover.png');
+                 scrollHover = createImg('IWC_scrollHover.png');
                  fadeHover = createImg('IWC_fadeHover.png');
+                 moveHover = createImg('IWC_moveHover.png');
+                 growHover = createImg('IWC_growHover.png');
+                 shrinkHover = createImg('IWC_shrinkHover.png');
+                 shakeHover = createImg('IWC_shakeHover.png');
               
                  
                  
@@ -144,8 +155,8 @@
                  //IT WAS HERE THE WHOLE TIME AND I JUST DIDN'T
                 // SEE IT TILL I ADDED TEXT IN THE BRACKETS LMAO
                  
-               footer = createDiv('IWC © 2018');
-                 footer.class('footer');
+               footer = createDiv('WIC © 2018');
+                  footer.class('footer');
                  footer.id('headColor');
           
                  
@@ -171,33 +182,63 @@
                  layerText.class('layerText');
 
 
-                 mouse.class('newImgGap');
-                 mouseHover.class('triggerGap');
+                 sMouse.class('newImgGap');
+                 mouse.class('triggerGap');
+                 fadeHover.class('triggerGapH');
                  scroll.class('triggerGap');
-                 fade.class('actionGap');
-                 move.class('smallGap');
-                 grow.class('smallGap');
-                 shrink.class('smallGap');
-                 shake.class('smallGap');
+                 scrollHover.class('triggerGapH');
                  
-                 fadeHover.id('buttonHover');
+                 fade.class('actionGap');
+                 fadeHover.class('actionGapH');
+                 
+                 move.class('smallGap');
+                 moveHover.class('smallGapH');
+                 
+                 grow.class('smallGap');
+                 growHover.class('smallGapH');
+                 
+                 shrink.class('smallGap');
+                 shrinkHover.class('smallGapH');
+                 
+                 shake.class('smallGap');
+                shakeHover.class('smallGapH');
+
+                 
+                 selectHover.class('buttonHover');
+                 mouseHover.class('buttonHover');
+                 fadeHover.class('buttonHover');
+                 scrollHover.class('buttonHover');
+                 moveHover.class('buttonHover1');
+                 growHover.class('buttonHover1');
+                 shrinkHover.class('buttonHover1');
+                 shakeHover.class('buttonHover1');
+            
+                 
+
                  
                  
 //IMAGES BEING THE CHILD OF MENU AND ITS PROPERTIES
                  menu.child(mText);
-                 menu.child(mouse);
+                 menu.child(selectHover);
+                 menu.child(sMouse);
             
                  menu.child(mText1);
+                 menu.child(scrollHover);
                  menu.child(scroll);
                  menu.child(mouseHover);
+                 menu.child(mouse);
                  
                  menu.child(mText2);
-                 menu.child(fade);
-                 menu.child(move);
-                 menu.child(grow);
-                 menu.child(shrink);
-                 menu.child(shake);
                  menu.child(fadeHover);
+                 menu.child(fade);
+                 menu.child(moveHover);
+                 menu.child(move);
+                 menu.child(growHover);
+                 menu.child(grow);
+                 menu.child(shrinkHover);
+                 menu.child(shrink);
+                 menu.child(shakeHover);
+                 menu.child(shake);
 
       
                  tint(0,127);
@@ -205,7 +246,7 @@
                  
                  tint(255);
                  panel.background(255);  
-                panel2.background(255);
+                 panel2.background(255);
                  panel3.background(255);
                  panel4.background(255);
                 
@@ -228,17 +269,22 @@
                     //and header.
                     
                 
-                    image(workSpaceBG, 55, 100);
-                  //  image(preview,0,0);
-                //    image(file,200,50);
+                    image(workSpaceBG, 55, 155);
+                    file.position(300,170);
+                    preview.position(425,170);
+                    upload.position(550,170);
                     
-                 image(panel, 125, 155);
-                image(panel2, 125, 340);
-                 image(panel3, 445, 340);
-                image(panel4, 125, 660);
+                 image(panel, 125, 200);
+                image(panel2, 125, 395);
+                 image(panel3, 445, 395);
+                image(panel4, 125, 730);
 
 
-             } 
+             }
+           
+           
+           
+
              
              
              

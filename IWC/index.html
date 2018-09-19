@@ -12,16 +12,19 @@
     <script>
     var input;
     var canvas;
-    var footer;    
+    var footer;
+    var psdFileName;    
+        
         
     function setup() {
     input = createInput();
-        footer = createDiv('');
+     //   footer = createDiv('');
+      psdFileName = '.psd';
     canvas = createCanvas(800, 400); //how big my canvas is.
     canvas.position(335, 130);
         
         
-          footer = createDiv('IWC © 2018');
+          footer = createDiv('WIC © 2018');
                  footer.class('footer');
                  footer.id('headColor');
             }
@@ -35,11 +38,13 @@
     //    rect ( 250, height / 2, 300, 30, 20); 
         //
         //3rd element curves the edges of the rectangle.
-        textSize(24);
+        textSize(28);
         fill(255);
-        text("Welcome to My Interactive Webcomic", 200, 150);
+        text("Welcome to WIC", 285, 130);
+        textSize(22);
+        text ("The Interactive Webcomic Toolkit",235,160);
         textSize(18);
-            text("Enter your PSD or AI file and hit Enter", 235, 180);
+            text("Enter the name of your PSD or AI file and hit Enter", 220, 190);
         
         textSize(18);
         fill(255);
@@ -53,15 +58,28 @@
                 
                 window.location.href = "toolkit.html";
                 
-        
+
                 
-            }            
-            
+            }    
+         
         }
         
+        //The Following below are several attempts at allowing to go to another page after using a string with "psd" attached to it
+        /*
+            function keyPressed(){
+            
+            if(keyCode === ENTER || text.input === psdFileName) {
+                
+                window.location.href = "toolkit.html";
+                
+
+                
+            }    
+         
+        }
+        */
         
       
-        
         
       
         /*

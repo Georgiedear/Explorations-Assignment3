@@ -19,6 +19,7 @@ body {
     
 }
 
+
 #workSpace {
     position: relative;
 
@@ -67,23 +68,51 @@ color: white;
 
 
 }
+.menuHover {
+    width:150px;
+    height: auto;
+    text-align: center;
+
+}
 .newImgGap {
     padding-top: -20px;
-    padding-bottom: 25px;
+    padding-bottom: px;
 }
 
 .triggerGap {
     
-    padding-bottom: 10px; 
+    padding-bottom: 5px; 
 }
 
 .actionGap {
-        padding-top: 0px;
+        padding-top: -10px;
  
 }
 .smallGap{
     padding: 5px;
+    
 }
+
+.newImgGapH {
+    padding-top: -20px;
+    padding-bottom: 25px;
+}
+
+.triggerGapH {
+    
+    padding-bottom: 10px; 
+}
+
+.actionGapH {
+        padding-top: 0px;
+ 
+}
+.smallGapH{
+    padding: 5px;
+    
+}
+
+    
 .menuText {
     color: white;
 }
@@ -91,18 +120,32 @@ color: white;
     color: white;
 }
 
- #buttonHover  {
-	/*padding-left: 315px;*/
+ .buttonHover  {
 	opacity: 0.0;
-	position: relative;
-	top: -475px;
-	-webkit-transition: opacity 1s;
-	-moz-transition: opacity 1s;
-	-ms-transition: opacity 1s;
-	-o-transition:: opacity 1s;
-	/*background-image: url(BGggy_Name-plate.png);*/
+     position: relative;
+     top: 87px;
+     margin-top: -80px;
+
+	-webkit-transition: opacity 0.5s;
+	-moz-transition: opacity 0.5s;
+	-ms-transition: opacity 0.5s;
+	-o-transition:: opacity 0.5s;
 	}
-	#buttonHover:hover {
+	.buttonHover:hover {
+		opacity: 1.0;
+	}
+
+ .buttonHover1  {
+	opacity: 0.0;
+     position: relative;
+     top: 92px;
+     margin-top: -80px;
+	-webkit-transition: opacity 0.5s;
+	-moz-transition: opacity 0.5s;
+	-ms-transition: opacity 0.5s;
+	-o-transition:: opacity 0.5s;
+	}
+	.buttonHover1:hover {
 		opacity: 1.0;
 	}
 	
@@ -111,10 +154,10 @@ color: white;
       background-color: skyblue;
     background-color:#0f537a; 
     width:150px;
-    height: 1090px;
+    height: 1021px;
     padding: 10px;
     margin-left: 1270px;
-    margin-top:-1110px;
+    margin-top:-1043px;
     position: absolute;
     text-align: center;
 }
@@ -126,3 +169,5 @@ color: white;
     background-color: cadetblue;
     
 }
+
+
