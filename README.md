@@ -38,7 +38,14 @@ Speaking of which! I need to add the rest of the divs and make it look better.(T
 
 ___________________________________________________
 
-3:53 AM
+3:53 AM September 14
 
 Managed to get the text box ON TOP of the canvas. Finally starting to wrap my head around how P5.js’s DOM tagging works…
 Time to link some strings and make an interactive webcomic! and make things slightly prettier.
+
+___________________________________________________
+
+3:53 AM September 18th
+
+All Action buttons are labeled and highlight when you hover over them. 
+File, Preview and Upload are now on the interface. 
